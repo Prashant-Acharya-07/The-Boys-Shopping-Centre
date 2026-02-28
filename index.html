@@ -75,6 +75,24 @@ nav{display:flex;justify-content:space-between;align-items:center;}
 .contact input,.contact textarea{width:100%;padding:12px;margin:10px 0;border:none;border-radius:5px;}
 iframe{width:100%;height:250px;border-radius:10px;border:0;}
 footer{text-align:center;padding:20px;background:#020617;}
+  .cart-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:15px;
+}
+
+.close-cart{
+background:none;
+border:none;
+color:white;
+font-size:22px;
+cursor:pointer;
+}
+
+.close-cart:hover{
+color:#38bdf8;
+}
 </style>
 </head>
 <body>
@@ -127,11 +145,17 @@ Our mission is to power your digital world with reliable products and excellent 
 </section>
 
 <div class="cart" id="cart">
+
+<div class="cart-header">
 <h2>Your Cart</h2>
+<button class="close-cart" onclick="toggleCart()">✖</button>
+</div>
+
 <div id="cart-items"></div>
 <div class="total">Total: Rs. <span id="total">0</span></div>
 <br>
 <button class="btn" onclick="orderWhatsApp()">Order via WhatsApp</button>
+
 </div>
 
 <section class="contact container" id="contact">
